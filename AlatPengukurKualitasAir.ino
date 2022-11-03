@@ -22,11 +22,13 @@ void setup(){
     Serial.println(NilaiKonduktivitas[i]);
 
     lcd.setCursor(0, 0);
+    lcd.print("TUNGGU 10 DETIK");
+    lcd.setCursor(0, 1);
     lcd.print("Silakan tunggu:");
-    lcd.setCursor(16, 0);
+    lcd.setCursor(16, 1);
     lcd.print(i+1);
 
-    sumK += NilaiKonduktivitas[i];
+    sumK += NilaiKonduktivitas[i]; 
     avgK = sumK/10;
     delay(1000);
   }
